@@ -1,0 +1,11 @@
+PRACTICA_PENDIENTE#1 
+-crear un mini sistema que me permita regitrar productos.
+-permitir ingresar el precio de compra y de venta de cada producto
+-mostrar la informacion de los productos registrados
+-marcar los productos con precio inferiores a 100.000 como productos en oferta
+
+PRACTICA_PENDIENTE#2
+-crear un mini sistema que me permita registrar productos
+-permitir ingresar el color del producto
+    -colores__ --amarillo --azul --rojo
+-contar cantidad de productos por cada color
