@@ -1,5 +1,0 @@
-PRACTICA_PENDIENTE#2
--crear un mini sistema que me permita registrar productos dew una misma linea el nombre no es necesario solo saber la cantidad del ingreso
--permitir ingresar el color del producto
-    -colores__ --amarillo --azul --rojo
--contar cantidad de productos por cada color
