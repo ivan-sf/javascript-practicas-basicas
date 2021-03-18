@@ -12,6 +12,40 @@ class Materia{
         `;
         document.write(respuesta);
     }
+
+    static cantidadClases(nombre){
+        let cantidad=0;
+        let totalAlumnos=alumnos.length;
+        for(let i=0;i<totalAlumnos;i++){
+            let totalAlumnosClase=alumnos[i].length;
+            for(let i2=0;i2<totalAlumnosClase;i2++){
+                if(nombre == alumnos[i][i2]){
+                    cantidad++;
+                }
+            }
+        }
+        let respuesta = `
+        <b>${nombre}</b> esta en <b>${cantidad}</b> clases <br>
+        `;
+        document.write(respuesta);
+    }
+    static materiasAlumno(nombre){
+        let clase = "";
+        let newMaterias=[];
+        let totalMaterias=materias.length;
+        for(let i=0;i<totalMaterias;i++){
+            let totalAlumnosClase=alumnos[i].length;
+            for(let i2=0;i2<totalAlumnosClase;i2++){
+                if(nombre == alumnos[i][i2]){
+                    newMaterias.push(materias[i]['nombreMateria']);
+                }
+            }
+        }
+        let respuesta = `
+        <b>${nombre}</b> esta en clases de: <b>${newMaterias}</b> <br>
+        `;
+        document.write(respuesta);
+    }
     
 }
 
@@ -30,30 +64,21 @@ document.write("<h1>Informacion materias</h1>");
 materiaFisica.info();
 materiaQuimica.info();
 materiaProgramacion.info();
+document.write("<h1>Cantidad de clases</h1>")
+Materia.cantidadClases("Ismael");
+Materia.cantidadClases("Alejandra");
+Materia.cantidadClases("Estela");
+Materia.cantidadClases("Jimmy");
+Materia.cantidadClases("Diana");
+Materia.cantidadClases("Ivan");
 
-let cantidadClases = function cantidadClases(nombre){
-    let cantidad=0;
-    let totalAlumnos=alumnos.length;
-    for(let i=0;i<totalAlumnos;i++){
-        totalAlumnosClase=alumnos[i].length;
-        for(let i2=0;i2<totalAlumnosClase;i2++){
-            if(nombre == alumnos[i][i2]){
-                cantidad++;
-            }
-        }
-    }
-    let respuesta = `
-    <b>${nombre}</b> esta en <b>${cantidad}</b> clases; <br>
-    `;
-    document.write(respuesta);
-}
-
-cantidadClases("Ismael");
-cantidadClases("Alejandra");
-cantidadClases("Estela");
-cantidadClases("Jimmy");
-cantidadClases("Diana");
-cantidadClases("Ivan");
+document.write("<h1>Clases por alumno</h1>")
+Materia.materiasAlumno("Ismael");
+Materia.materiasAlumno("Alejandra");
+Materia.materiasAlumno("Estela");
+Materia.materiasAlumno("Jimmy");
+Materia.materiasAlumno("Diana");
+Materia.materiasAlumno("Ivan");
 
 
 // for(let i=0;i<totalMaterias;i++){
